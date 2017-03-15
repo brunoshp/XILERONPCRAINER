@@ -39,7 +39,16 @@ if( .@Input != .@Answer ){
 	mes "Wrong";
 	atcommand "@kick "+strcharinfo(0);
 }
+
+	atcommand "@option 0 0 0";
+	atcommand "@fakename";
+	set @fakecharname,0;
+	mes "[Bot Check] Approved!";
+	if(getskilllv(39)>0) { setcart; }
+	if(getskilllv(127)>0) { setfalcon; }
+	if(getskilllv(63)>0) { setriding; }
 close;
+
 
 }
 payon,1,1,1	script	fakecharnamebot	-1,{
